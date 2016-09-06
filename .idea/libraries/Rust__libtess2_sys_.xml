@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Rust &lt;libtess2-sys&gt;">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.cargo/rust-1.13.0-src.zip!/rust-77d2cd28fd715d2b9751de82b14d28ce6e376728/src/libstd" />
+      <root url="jar://$USER_HOME$/.cargo/rust-1.13.0-src.zip!/rust-77d2cd28fd715d2b9751de82b14d28ce6e376728/src/libcore" />
+      <root url="jar://$USER_HOME$/.cargo/rust-1.13.0-src.zip!/rust-77d2cd28fd715d2b9751de82b14d28ce6e376728/src/libcollections" />
+      <root url="jar://$USER_HOME$/.cargo/rust-1.13.0-src.zip!/rust-77d2cd28fd715d2b9751de82b14d28ce6e376728/src/liballoc" />
+      <root url="jar://$USER_HOME$/.cargo/rust-1.13.0-src.zip!/rust-77d2cd28fd715d2b9751de82b14d28ce6e376728/src/librustc_unicode" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
