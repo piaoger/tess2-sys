@@ -18,7 +18,7 @@ fn test_link() {
 
 #[test]
 fn test_basic_tess() {
-    let mut data = [0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0];
+    let mut data: [f32; 8] = [0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0];
     unsafe {
         let nvp = 3usize;
         let fpv = 2;

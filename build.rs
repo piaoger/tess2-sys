@@ -8,7 +8,7 @@ fn generate_bindings() {
         .generate_inline_functions(true)
         .generate_comments(true)
         .rustfmt_bindings(true)
-        // Bitfield,ModuleConsts,Consts,Rust { non_exhaustive: false }
+        // Bitfield,ModuleConsts,Consts, Rust { non_exhaustive: false }
         .default_enum_style(bindgen::EnumVariation::Rust {
             non_exhaustive: false,
         })
