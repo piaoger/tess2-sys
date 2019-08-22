@@ -8,10 +8,10 @@ fn generate_bindings() {
         .generate_inline_functions(true)
         .generate_comments(true)
         .rustfmt_bindings(true)
+        // Bitfield,ModuleConsts,Consts,Rust { non_exhaustive: false }
         .default_enum_style(bindgen::EnumVariation::Rust {
             non_exhaustive: false,
         })
-        //.default_enum_style(bindgen::EnumVariation::ModuleConsts) // Bitfield,ModuleConsts,Consts,Rust { non_exhaustive: false }
         .generate()
         .expect("Unable to generate bindings.")
         .write_to_file(out_path.join("src").join("bindings.rs"))
