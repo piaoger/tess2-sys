@@ -1,18 +1,15 @@
 [package]
 name = "tess2-sys"
 version = "0.0.1"
-authors = ["Michal Hornický <semtexzv@gmail.com>"]
+authors = ["piaoger gong"]
+edition = "2018"
 
-description = "FFI definitions and build script for libtess2"
-license = "Apache-2.0"
-keywords = ["FFI","Polygon","Triangulation"]
+[features]
+default = []
 
-repository = "https://github.com/semtexzv/tess2-sys"
-homepage = "https://github.com/semtexzv/tess2-sys"
-
-build = "build.rs"
-
-[dependencies]
+# Whether or not to run bindgen
+update-bindings = ["bindgen"]
 
 [build-dependencies]
-gcc = "0.3"
+cc = "1.0"
+bindgen = { version = "0.51", optional = true }
