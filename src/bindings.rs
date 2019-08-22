@@ -32,9 +32,25 @@ pub struct TESStesselator {
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct TESSalloc {
-    pub memalloc: ::std::option::Option<unsafe extern "C" fn(userData: *mut ::std::os::raw::c_void, size: ::std::os::raw::c_uint) -> *mut ::std::os::raw::c_void>,
-    pub memrealloc: ::std::option::Option<unsafe extern "C" fn(userData: *mut ::std::os::raw::c_void, ptr: *mut ::std::os::raw::c_void, size: ::std::os::raw::c_uint) -> *mut ::std::os::raw::c_void>,
-    pub memfree: ::std::option::Option<unsafe extern "C" fn(userData: *mut ::std::os::raw::c_void, ptr: *mut ::std::os::raw::c_void)>,
+    pub memalloc: ::std::option::Option<
+        unsafe extern "C" fn(
+            userData: *mut ::std::os::raw::c_void,
+            size: ::std::os::raw::c_uint,
+        ) -> *mut ::std::os::raw::c_void,
+    >,
+    pub memrealloc: ::std::option::Option<
+        unsafe extern "C" fn(
+            userData: *mut ::std::os::raw::c_void,
+            ptr: *mut ::std::os::raw::c_void,
+            size: ::std::os::raw::c_uint,
+        ) -> *mut ::std::os::raw::c_void,
+    >,
+    pub memfree: ::std::option::Option<
+        unsafe extern "C" fn(
+            userData: *mut ::std::os::raw::c_void,
+            ptr: *mut ::std::os::raw::c_void,
+        ),
+    >,
     pub userData: *mut ::std::os::raw::c_void,
     pub meshEdgeBucketSize: ::std::os::raw::c_int,
     pub meshVertexBucketSize: ::std::os::raw::c_int,
@@ -45,57 +61,115 @@ pub struct TESSalloc {
 }
 #[test]
 fn bindgen_test_layout_TESSalloc() {
-    assert_eq!(::std::mem::size_of::<TESSalloc>(), 56usize, concat!("Size of: ", stringify!(TESSalloc)));
-    assert_eq!(::std::mem::align_of::<TESSalloc>(), 8usize, concat!("Alignment of ", stringify!(TESSalloc)));
+    assert_eq!(
+        ::std::mem::size_of::<TESSalloc>(),
+        56usize,
+        concat!("Size of: ", stringify!(TESSalloc))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<TESSalloc>(),
+        8usize,
+        concat!("Alignment of ", stringify!(TESSalloc))
+    );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).memalloc as *const _ as usize },
         0usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(memalloc))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(memalloc)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).memrealloc as *const _ as usize },
         8usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(memrealloc))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(memrealloc)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).memfree as *const _ as usize },
         16usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(memfree))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(memfree)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).userData as *const _ as usize },
         24usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(userData))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(userData)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).meshEdgeBucketSize as *const _ as usize },
         32usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(meshEdgeBucketSize))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(meshEdgeBucketSize)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).meshVertexBucketSize as *const _ as usize },
         36usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(meshVertexBucketSize))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(meshVertexBucketSize)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).meshFaceBucketSize as *const _ as usize },
         40usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(meshFaceBucketSize))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(meshFaceBucketSize)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).dictNodeBucketSize as *const _ as usize },
         44usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(dictNodeBucketSize))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(dictNodeBucketSize)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).regionBucketSize as *const _ as usize },
         48usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(regionBucketSize))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(regionBucketSize)
+        )
     );
     assert_eq!(
         unsafe { &(*(::std::ptr::null::<TESSalloc>())).extraVertices as *const _ as usize },
         52usize,
-        concat!("Offset of field: ", stringify!(TESSalloc), "::", stringify!(extraVertices))
+        concat!(
+            "Offset of field: ",
+            stringify!(TESSalloc),
+            "::",
+            stringify!(extraVertices)
+        )
     );
 }
 extern "C" {
@@ -105,10 +179,20 @@ extern "C" {
     pub fn tessDeleteTess(tess: *mut TESStesselator);
 }
 extern "C" {
-    pub fn tessAddContour(tess: *mut TESStesselator, size: ::std::os::raw::c_int, pointer: *const ::std::os::raw::c_void, stride: ::std::os::raw::c_int, count: ::std::os::raw::c_int);
+    pub fn tessAddContour(
+        tess: *mut TESStesselator,
+        size: ::std::os::raw::c_int,
+        pointer: *const ::std::os::raw::c_void,
+        stride: ::std::os::raw::c_int,
+        count: ::std::os::raw::c_int,
+    );
 }
 extern "C" {
-    pub fn tessSetOption(tess: *mut TESStesselator, option: TessOption, value: ::std::os::raw::c_int);
+    pub fn tessSetOption(
+        tess: *mut TESStesselator,
+        option: TessOption,
+        value: ::std::os::raw::c_int,
+    );
 }
 extern "C" {
     pub fn tessTesselate(
