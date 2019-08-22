@@ -1,4 +1,4 @@
-#[cfg(feature = "build-bindgen")]
+#[cfg(feature = "update-bindings")]
 fn generate_bindings() {
     use std::env;
     use std::path::PathBuf;
@@ -16,7 +16,7 @@ fn generate_bindings() {
         .expect("Couldn't write bindings.");
 }
 
-#[cfg(not(feature = "build-bindgen"))]
+#[cfg(not(feature = "update-bindings"))]
 fn generate_bindings() {
     // nothing
 }

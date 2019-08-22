@@ -23,7 +23,7 @@ fn main() {
 
         println!(
             "STATUS:{:?}",
-            tessTesselate(tess, TessWindingRule::TESS_WINDING_POSITIVE as i32, TessElementType::TESS_POLYGONS, nvp as i32, 2, 0 as *const _)
+            tessTesselate(tess, TessWindingRule::TESS_WINDING_POSITIVE, TessElementType::TESS_POLYGONS, nvp as i32, 2, 0 as *const _)
         );
         println!("Elems:{:?} {:?}", tessGetElements(tess), tessGetElementCount(tess));
         println!("Elems:{:?} {:?}", tessGetVertices(tess), tessGetVertexCount(tess));
