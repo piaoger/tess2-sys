@@ -18,8 +18,9 @@ help:
 	@echo "# rust binding for tess2!"
 	@echo "#-------------------------------------"
 	@echo " build           - build the project"
+	@echo " update-bindings - update bindings"
 	@echo " clean           - cleanup and refresh"
-	@echo " updatedeps      - update dependencies"
+	@echo " updatedeps      - update libtess2 dependencies"
 	@echo " fmt             - format code"
 	@echo " test            - run test"
 
